@@ -2,11 +2,11 @@
   
    
 This repository includes:  
-  - 1 Sanger reads that sequenced PCR fragments amplified between nifH1DKB genes from heterocyst induced cells.  
-  - 2 The clipped paired-end sequencing reads.   
-  - 3 Raw contig sequences assembled from clipped paired-end sequencing reads (the schematic workflow is shown in Fig. 1).   
-  - 4 Direct link for DDBJ sequencing archive and NSSS.   
-  - 5 Code for reconstruction of the nif gene clusters.  
+  - Sanger reads that sequenced PCR fragments amplified between nifH1DKB genes from heterocyst induced cells.  
+  - The clipped paired-end sequencing reads.   
+  - Raw contig sequences assembled from clipped paired-end sequencing reads (the schematic workflow is shown in Fig. 1).   
+  - Direct link for DDBJ sequencing archive and NSSS.   
+  - Code for reconstruction of the nif gene clusters.  
 
 ### 1: Sanger reads that sequenced PCR fragments amplified between nifH1DKB genes from heterocyst induced cells.  
 ALL ABI Sanger file formated sequeincg reads are stored in each directory.  
