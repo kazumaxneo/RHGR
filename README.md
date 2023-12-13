@@ -6,7 +6,7 @@ This repository includes;
 2, Raw contig sequences assembled from clipped paired-end sequencing reads (the schematic workflow is shown in Fig. 1).   
 3, Code for reconstruction of the nif gene clusters.
 
-![Fig.1](img/Sup.Fig.2.pdf)
+![Fig.1](img/Sup.Fig.2.pdf)  
 Fig.1 The schematic workflow for assembling reconstituted nif genes from bulk short read sequencing. 
 
 ## Citation  
