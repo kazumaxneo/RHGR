@@ -1,4 +1,4 @@
-![image](https://github.com/kazumaxneo/RHGR/assets/20102961/093ec271-c374-4706-af82-1f56445f17ef)![image](https://github.com/kazumaxneo/RHGR/assets/20102961/90af57d2-3854-4ab6-b4a3-bfe85bf987b4)![image](https://github.com/kazumaxneo/RHGR/assets/20102961/b9615cbe-f627-4e0e-af77-fcaea87edb64)![image](https://github.com/kazumaxneo/RHGR/assets/20102961/1c3d8335-f034-43a1-997a-e363188addca)## Supporting data for the nif gene cluster reconstitution in the Nitrogen-Fixing Cyanobacterium Calothrix sp. NIES-4101. 
+## Supporting data for the nif gene cluster reconstitution in the Nitrogen-Fixing Cyanobacterium Calothrix sp. NIES-4101. 
   
    
 This repository includes;  
