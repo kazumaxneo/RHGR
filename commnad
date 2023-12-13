@@ -1,0 +1,44 @@
+#1, fastp pre-processing
+fastp -i DNBSEQ_85_Read1.fq.gz -I DNBSEQ_85_Read2.fq.gz -3 -o DNBSEQ_85_QT1.fq.gz -O DNBSEQ_85_QT2.fq.gz -h fastp_report.html -j fastp_report.json -q 30 -n 10 -t 1 -T 1 -l 20 -w 6
+
+#2, sam export
+minimap2 -ax sr -t 8 GCA_004296455.1_ASM429645v1_genomic.fna DNBSEQ_Calo_QT1.fq.gz > R1.sam
+minimap2 -ax sr -t 8 GCA_004296455.1_ASM429645v1_genomic.fna DNBSEQ_Calo_QT2.fq.gz > R2.sam
+
+3, extract clipping read (select hard[H] or soft[S] clipped alignmnets)
+awk '$6 ~ /[SH]/' R1.sam > R1_clipped.sam
+awk '$6 ~ /[SH]/' R2.sam > R2_clipped.sam
+
+#4, header
+grep ^@ R1_clipped.sam > header1
+grep ^@ R2_clipped.sam > header2
+#headerと連結
+cat header1 R1_clipped.sam > R1_clipped_with_header.sam
+cat header2 R1_clipped.sam > R2_clipped_with_header.sam
+
+#5 bam convertion and coordinate sort
+samtools sort -@ 4 R1_clipped_with_header.sam > R1.bam
+samtools sort -@ 4 R2_clipped_with_header.sam > R2.bam
+
+#6 Then, bam => fastq convertion
+samtools fastq -@ 8 R1.bam > R1_cliped.fq
+samtools fastq -@ 8 R2.bam > R2_cliped.fq
+
+#7 resynclonize fastq
+repair.sh -Xmx20g in1=R1_cliped.fq in2=DNBSEQ_Calo_QT1.fq.gz out1=R1_fixed1.fq.gz out2=R2_fixed1.fq.gz repair
+repair.sh -Xmx20g in1=DNBSEQ_Calo_QT1.fq.gz in2=R2_cliped.fq out1=R1_fixed2.fq.gz out2=R2_fixed2.fq.gz repair
+
+#8 concatenate reads
+cat R1_fixed1.fq.gz R1_fixed2.fq.gz > R1_cliped.fq.gz
+cat R2_fixed1.fq.gz R2_fixed2.fq.gz > R2_cliped.fq.gz
+
+#9 remove rduplicated pairs using seqkit rmdup command
+seqkit rmdup -n R1_cliped.fq.gz  > R1.fq
+seqkit rmdup -n R2_cliped.fq.gz  > R2.fq
+
+#10 assemble with MetaSPAdes
+metaspades.py -1 R1_clipped.fq -2 R2_clipped.fq -o metaspades -t 8 -k 21,31,41,51,61,71,81,91,101,111,121,127
+
+#11 blastx search against A.7120 NifHDKENB sequences.
+makeblastdb -in A7120_nifHDKENB_proteins.faa -out A7120nif_DB -dbtype prot -parse_seqids
+blastx -db A7120nif_DB -query contigs.fasta -out blastx.txt -num_threads 8 -evalue 1e-5 -outfmt 2
