@@ -8,10 +8,10 @@ This repository includes:
 4 Direct link for DDBJ sequencing archive and NSSS.   
 5 Code for reconstruction of the nif gene clusters.  
 
-### 1 Sanger reads that sequenced PCR fragments amplified between nifH1DKB genes from heterocyst induced cells.  
+### 1: Sanger reads that sequenced PCR fragments amplified between nifH1DKB genes from heterocyst induced cells.  
 ALL ABI Sanger file formated sequeincg reads are stored in each directory.  
 
-### 2-3 Clipped paired-end sequencing reads and raw contig sequences.   
+### 2-3: Clipped paired-end sequencing reads and raw contig sequences.   
 R1_clipped.fq.gz and R2_clipped.fq.gz is partially aligned （not globally）　reads for the vegetative cell assembly.  
 
 ### 4: Link for DDBJ sequencing archive and NSSS.   
