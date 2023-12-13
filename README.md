@@ -1,12 +1,20 @@
-## Supporting data for the nif gene cluster reconstitution in the Nitrogen-Fixing Cyanobacterium Calothrix sp. NIES-4101. 
-
+![image](https://github.com/kazumaxneo/RHGR/assets/20102961/093ec271-c374-4706-af82-1f56445f17ef)![image](https://github.com/kazumaxneo/RHGR/assets/20102961/90af57d2-3854-4ab6-b4a3-bfe85bf987b4)![image](https://github.com/kazumaxneo/RHGR/assets/20102961/b9615cbe-f627-4e0e-af77-fcaea87edb64)![image](https://github.com/kazumaxneo/RHGR/assets/20102961/1c3d8335-f034-43a1-997a-e363188addca)## Supporting data for the nif gene cluster reconstitution in the Nitrogen-Fixing Cyanobacterium Calothrix sp. NIES-4101. 
+  
    
 This repository includes;  
 1, Sanger sequencing reads for PCR amplifing nifH1DKB genes from heterocyst induced cells.  
 2, Raw contig sequences assembled from clipped paired-end sequencing reads (the schematic workflow is shown in Fig. 1).   
-3, Code for reconstruction of the nif gene clusters.
+3, Direct link for DDBJ sequencing archive and NSSS.   
+4, Code for reconstruction of the nif gene clusters.  
 
-<img src="https://github.com/kazumaxneo/RHGR/img/Fig1.png" alt="Fig1" style="max-width: 60%">
+### link for DDBJ sequencing archive and NSSS.   
+BioProject <PRJDB16824>; https://ddbj.nig.ac.jp/resource/sra-experiment/DRX491938  
+BioSample <SAMD00651075>; https://ddbj.nig.ac.jp/resource/sra-run/DRR508037  
+DRA Run <DRR508037>; https://ddbj.nig.ac.jp/resource/sra-run/DRR508037
+NSSS <LC785442>; https://getentry.ddbj.nig.ac.jp/getentry/na/LC785442/?format=flatfile&filetype=html&trace=true&show_suppressed=false&limit=10
+
+  
+![Fi1](img/Fig1.png)
 Fig.1 The schematic workflow for assembling reconstituted nif genes from bulk short read sequencing. 
 
 ## Citation  
