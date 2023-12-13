@@ -17,7 +17,7 @@ Two fastq files; R1_clipped.fq.gz and R2_clipped.fq.gz, are partially aligned (n
 ### 4: Link for DDBJ sequencing archive and NSSS.   
 BioProject <PRJDB16824>; https://ddbj.nig.ac.jp/resource/sra-experiment/DRX491938  
 BioSample <SAMD00651075>; https://ddbj.nig.ac.jp/resource/sra-run/DRR508037  
-DRA Run <DRR508037>; https://ddbj.nig.ac.jp/resource/sra-run/DRR508037
+DRA Run <DRR508037>; https://ddbj.nig.ac.jp/resource/sra-run/DRR508037  
 NSSS <LC785442>; https://getentry.ddbj.nig.ac.jp/getentry/na/LC785442/?format=flatfile&filetype=html&trace=true&show_suppressed=false&limit=10
 
     
