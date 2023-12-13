@@ -4,7 +4,7 @@ fastp -i DNBSEQ_85_Read1.fq.gz -I DNBSEQ_85_Read2.fq.gz -3 -o DNBSEQ_85_QT1.fq.g
 #2 sam export
 minimap2 -ax sr -t 8 GCA_004296455.1_ASM429645v1_genomic.fna DNBSEQ_Calo_QT1.fq.gz > R1.sam
 minimap2 -ax sr -t 8 GCA_004296455.1_ASM429645v1_genomic.fna DNBSEQ_Calo_QT2.fq.gz > R2.sam
-
+ 
 3 extract clipping read (select hard[H] or soft[S] clipped alignmnets)
 awk '$6 ~ /[SH]/' R1.sam > R1_clipped.sam
 awk '$6 ~ /[SH]/' R2.sam > R2_clipped.sam
