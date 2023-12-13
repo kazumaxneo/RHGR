@@ -6,7 +6,7 @@ This repository includes:
   - The clipped paired-end sequencing reads.   
   - Raw contig sequences assembled from clipped paired-end sequencing reads (the schematic workflow is shown in Fig. 1).   
   - Direct link for DDBJ sequencing archive and NSSS.   
-  - Code for reconstruction of the nif gene clusters.  
+  - Code for reconstruction of the nif gene clusters (in preparation).  
 
 ### 1: Sanger reads that sequenced PCR fragments amplified between nifH1DKB genes from heterocyst induced cells.  
 All ABI formated Sanger sequeincg reads are stored in each directory.  
