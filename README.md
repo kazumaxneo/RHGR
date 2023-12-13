@@ -9,7 +9,7 @@ This repository includes:
   - Code for reconstruction of the nif gene clusters.  
 
 ### 1: Sanger reads that sequenced PCR fragments amplified between nifH1DKB genes from heterocyst induced cells.  
-ALL ABI Sanger file formated sequeincg reads are stored in each directory.  
+All ABI formated Sanger sequeincg reads are stored in each directory.  
   
 ### 2-3: Clipped paired-end sequencing reads and raw contig sequences.   
 Two fastq files; R1_clipped.fq.gz and R2_clipped.fq.gz, are partially aligned (not globally) reads against vegetative cell assembly. Contig.fasta is a raw assembly from clipped paired-end reads using MetaSPAdes.
