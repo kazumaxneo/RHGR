@@ -1,18 +1,18 @@
-#1, fastp pre-processing
+#1 fastp pre-processing
 fastp -i DNBSEQ_85_Read1.fq.gz -I DNBSEQ_85_Read2.fq.gz -3 -o DNBSEQ_85_QT1.fq.gz -O DNBSEQ_85_QT2.fq.gz -h fastp_report.html -j fastp_report.json -q 30 -n 10 -t 1 -T 1 -l 20 -w 6
 
-#2, sam export
+#2 sam export
 minimap2 -ax sr -t 8 GCA_004296455.1_ASM429645v1_genomic.fna DNBSEQ_Calo_QT1.fq.gz > R1.sam
 minimap2 -ax sr -t 8 GCA_004296455.1_ASM429645v1_genomic.fna DNBSEQ_Calo_QT2.fq.gz > R2.sam
 
-3, extract clipping read (select hard[H] or soft[S] clipped alignmnets)
+3 extract clipping read (select hard[H] or soft[S] clipped alignmnets)
 awk '$6 ~ /[SH]/' R1.sam > R1_clipped.sam
 awk '$6 ~ /[SH]/' R2.sam > R2_clipped.sam
 
-#4, header
+#4 header
 grep ^@ R1_clipped.sam > header1
 grep ^@ R2_clipped.sam > header2
-#headerと連結
+#concatenate with header
 cat header1 R1_clipped.sam > R1_clipped_with_header.sam
 cat header2 R1_clipped.sam > R2_clipped_with_header.sam
 
