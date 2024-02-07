@@ -26,7 +26,7 @@ Fig.1 The schematic workflow for assembling reconstituted nif genes from bulk sh
 
 ## Citation  
 Kazuma Uesaka, Mari Banba, Sotaro Chiba,  Yuichi Fujita; Restoration of the Functional nif Gene Cluster by Complex Recombination Events during Heterocyst Development in the Nitrogen-Fixing Cyanobacterium Calothrix sp. NIES-4101.
-Plant and Cell Physiology, Published: 02 February 2024
+Plant and Cell Physiology, Published: 02 February 2024.  
 doi: https://doi.org/10.1093/pcp/pcae011
  
 ## Contact
